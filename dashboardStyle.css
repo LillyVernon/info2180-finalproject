@@ -1,0 +1,173 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    width: 100%;
+    margin: 0;
+}
+
+.item1 {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: span 1;
+    background-color: black;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.item2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: span 10;
+    background-color: #D3D3D3;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.item3 {
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: span 10;
+    background-color: white;
+    padding-left: 20px;
+    padding-bottom: 80px;
+}
+
+.item3 .issueHeading label {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.item3 .btns label {
+    font-weight: bold;
+}
+
+.item1 h5 {
+    font-size: 20px;
+}
+
+a>img {
+    width: 20px;
+    height: 20px;
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th:first-of-type {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+th:last-of-type {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#table .th {
+    background-color: #D3D3D3;
+    border: none;
+}
+
+#table {
+    width: 100%;
+}
+
+#table tr {
+    border-bottom: 1.5pt solid #ebebeb;
+}
+
+#table td:first-child {
+    font-weight: bold;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 10px;
+}
+
+#table tr td {
+    color: black;
+}
+
+#table tr td+td+td {
+    color: black;
+}
+
+.ticketissue {
+    font-weight: normal;
+    color: #4e8bd5;
+}
+
+#createIssue {
+    float: right;
+    background-color: #2da562;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+}
+
+.issueHeading {
+    padding: 20px 20px 20px 0px;
+}
+
+.btns {
+    padding: 0px 20px 20px 0px;
+}
+
+.btns input {
+    border-radius: 4px;
+    padding: 6px 20px;
+    margin: 5px;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}
+
+.btns input:hover {
+    color: white;
+    background-color: #1b6ac9;
+}
+
+.btns input:focus {
+    background-color: #1b6ac9;
+    color: white;
+    border: none;
+}
+
+.status {
+    padding: 10px 0px;
+}
+
+.statuscontent {
+    margin: 10px 0px;
+    padding: 5px 10px;
+    background-color: #22AA66;
+    color: white;
+    border-radius: 5px 5px;
+    text-transform: uppercase;
+}

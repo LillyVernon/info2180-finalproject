@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BugMe Issue Tracker</title>
+    <link rel="stylesheet" href="dashboardStyle.css">
+    <script src="BugMe.js"></script>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="item1">
+            <header>
+                <h5> BugMe Issue Tracker </h5>
+            </header>
+        </div>
+        <div class="item2">
+            <ul>
+                <li>
+                    <a href="Dashboard.html"> <img src="home.png"> Home </a>
+                </li>
+                <li>
+                    <a href="index.html"> <img src="user.png"> Add User </a>
+                </li>
+                <li>
+                    <a href="Issue.html"> <img src="add.png"> New Issue</a>
+                </li>
+                <li>
+                    <a href="login.html"> <img src="logout.png">Logout </a>
+                </li>
+            </ul>
+        </div>
+        <div class="item3">
+            <div class="issueHeading">
+                <label> Issues</label>
+                <input onclick="window.location.href='Issue.html';" type="submit" id="createIssue" value="Create New Issue">
+            </div>
+            <div class="btns">
+                <label> Filter by: </label>
+                <input type="submit" value="ALL">
+                <input type="submit" value="OPEN">
+                <input type="submit" value="MY TICKETS">
+            </div>
+
+            <table id="table">
+                <tr class="th">
+                    <th>Title </th>
+                    <th>Type</th>
+                    <th>Status </th>
+                    <th>Assigned To</th>
+                    <th>Created</th>
+                </tr>
+                <tr>
+                    <td> #100 <span class="ticketissue"> XSS Vulnerability in Add User Form</span> </td>
+                    <td>Bug </td>
+                    <td class="status">
+                        <span class="statuscontent">Open</span>
+                    </td>
+                    <td>Tom Brady </td>
+                    <td>2019-11-01 </td>
+                </tr>
+                <tr>
+                    <td> #23 <span class="ticketissue">Location Service isn't working</span></td>
+                    <td>Bug </td>
+                    <td class="status">
+                        <span class="statuscontent">Open</span>
+                    </td>
+                    <td>Jan Brady </td>
+                    <td>2019-10-15 </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+</body>
+
+</html>

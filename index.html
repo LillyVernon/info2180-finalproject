@@ -7,6 +7,7 @@
     <title>BugMe Issue Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <script src="BugMe.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -20,16 +21,16 @@
         <div class="item2">
             <ul>
                 <li>
-                    <a href="#"> <img src="home.png"> Home </a>
+                    <a href="Dashboard.html"> <img src="home.png"> Home </a>
                 </li>
                 <li>
-                    <a href="#"> <img src="user.png"> Add User </a>
+                    <a href="index.html"> <img src="user.png"> Add User </a>
                 </li>
                 <li>
-                    <a href="#"> <img src="add.png"> New Issue</a>
+                    <a href="Issue.html"> <img src="add.png"> New Issue</a>
                 </li>
                 <li>
-                    <a href="#"> <img src="logout.png">Logout </a>
+                    <a href="login.html"> <img src="logout.png">Logout </a>
                 </li>
             </ul>
         </div>
@@ -41,9 +42,9 @@
                 <label for="lname">Lastname:</label><br>
                 <input type="text" id="lname" name="lname"><br>
                 <label for="email">Email:</label><br>
-                <input type="text" id="email" name="email"><br>
+                <input type="email" id="email" name="email"><br>
                 <label for="password">Password:</label><br>
-                <input type="text" id="password" name="password"><br>
+                <input type="password" id="password" name="password"><br>
                 <input type="submit" id="submit" value="Submit">
             </form>
         </div>
