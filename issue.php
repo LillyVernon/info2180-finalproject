@@ -8,11 +8,6 @@
     <link rel="stylesheet" href="issueStyle.css">
     <script src="BugMe.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $("#assign").load('http://localhost/info2180-finalProject/assign.php');
-        });
-    </script>
 </head>
 
 <body>
@@ -51,8 +46,9 @@
 
                 <label for="assign">Assign To </label><br>
                 <select id="assign" name="assign">
-                </select>
-                <br>
+                  </select><br>
+                <?php include 'assign.php';  ?>
+
                 <label for="type">Type</label><br>
                 <select id="type" name="type">
                     <option value="Bug"> Bug</option>

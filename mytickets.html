@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugMe Issue Tracker</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboardStyle.css">
     <script src="BugMe.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".phptable").load('http://localhost/info2180-finalProject/mytickets.php');
+        });
+    </script>
 </head>
 
 <body>
@@ -35,21 +40,17 @@
             </ul>
         </div>
         <div class="item3">
-            <h2> New User</h2>
-            <form>
-                <label for="fname">Firstname:</label><br>
-                <input type="text" id="fname" name="fname"><br>
-
-                <label for="lname">Lastname:</label><br>
-                <input type="text" id="lname" name="lname"><br>
-
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-
-                <label for="password">Password:</label><br>
-                <input type="password" id="passwordcreate" name="password"><br>
-                <input type="submit" id="submit" value="Submit">
-            </form>
+            <div class="issueHeading">
+                <label> Issues</label>
+                <input onclick="window.location.href='Issue.html';" type="submit" id="createIssue" value="Create New Issue">
+            </div>
+            <div class="btns">
+                <label> Filter by: </label>
+                <input id="allbtn" type="submit" value="ALL">
+                <input id="openbtn" type="submit" value="OPEN">
+                <input id="myticketbtn" type="submit" value="MY TICKETS">
+            </div>
+            <div class="phptable"> </div>
         </div>
 
     </div>

@@ -1,8 +1,8 @@
 <?php
 require ('BugMe.php');
 
-$sqlDashboard= "SELECT  title, type_,status_,assigned_to,created from issues ";
-$result=  $conn->query($sqlDashboard);
+$sql= "SELECT  title, type_,status_,assigned_to,created from issues WHERE created_by='%".$_SESSION['loginemail']."%'";
+$result=  $conn->query($sql);
 ?>
 
  <table id="table">
@@ -15,7 +15,7 @@ $result=  $conn->query($sqlDashboard);
 </tr>
 <?php foreach ($result as $row): ?>
 <tr>
-  <td > <a href="" class="ticketissue"> <?= $row['title']; ?> </a></td>
+  <td > <a href="issueDetail.html" class="ticketissue"> <?= $row['title']; ?> </a></td>
   <td ><?= $row['type_']; ?></td>
   <td class="status"> <span class="statuscontent"> <?= $row['status_']; ?></span> </td>
   <td ><?= $row['assigned_to']; ?></td>
@@ -23,4 +23,3 @@ $result=  $conn->query($sqlDashboard);
 </tr>
 <?php endforeach; ?>
 </table>
-
