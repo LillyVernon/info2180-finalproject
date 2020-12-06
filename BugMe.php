@@ -2,19 +2,17 @@
 
 session_start();
 header('Access-Control-Allow-Origin: *');
-$host = 'localhost';
-$dbname = 'bugme';
-$username = 'Group23Web';
-$password = '2020Sem1';
+require ('connection.php');
+
 //$_SESSION['loginfirstname']="";
 //$_SESSION['loginlastname']="";
-try {
-    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);  //this statement is used to connect to the database
-    //echo "Connected to $dbname at $host successfully.";
-    //$conn = null;
-} catch (PDOException $pe) {
-    die("Could not connect to the database $dbname :" . $pe->getMessage());
-}
+// try {
+//     $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);  //this statement is used to connect to the database
+//     //echo "Connected to $dbname at $host successfully.";
+//     //$conn = null;
+// } catch (PDOException $pe) {
+//     die("Could not connect to the database $dbname :" . $pe->getMessage());
+// }
  
 
  if($_SERVER['REQUEST_METHOD'] === 'POST'){

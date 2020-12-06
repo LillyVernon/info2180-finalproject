@@ -8,7 +8,7 @@ USE BugMe;
     lastname varchar(255) ,
     user_password varchar(255) NOT NULL,
     email varchar(255) NOT NULL,
-    date_joined datetime  DEFAULT(getdate()),
+    date_joined datetime,
     PRIMARY KEY  (id)
 ); 
 
@@ -21,8 +21,8 @@ CREATE TABLE Issues (
     status_ varchar (255),
     assigned_to int (11) NOT NULL,
     created_by int (11) NOT NULL,
-    created datetime  NOT NULL  DEFAULT(getdate()),
-    updated datetime NOT NULL  DEFAULT(getdate()),
+    created datetime  NOT NULL,
+    updated datetime NOT NULL,
     PRIMARY KEY  (id)
 );
 

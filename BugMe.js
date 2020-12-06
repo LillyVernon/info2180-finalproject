@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 var data = "fname=" + fname.value + "&lname=" + lname.value + "&email=" + email.value + "&password=" + password.value + "&num=" + '1';
                 console.log(data)
                 var xmlhttp = new XMLHttpRequest();
-                xmlhttp.open("POST", "http://localhost:/info2180-finalProject/BugMe.php", true);
+                xmlhttp.open("POST", "BugMe.php", true);
                 xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp.onreadystatechange = function() {
                     if (this.readyState === 4 || this.status === 200) {
@@ -64,17 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
             event.preventDefault();
 
 
-
-
             if (checkempty(loginemail) == 0 && checkempty(loginpassword) == 0) {
                 var data = "loginemail=" + loginemail.value + "&password=" + loginpassword.value + "&num=" + '2';
                 var xmlhttp2 = new XMLHttpRequest();
-                xmlhttp2.open("POST", "http://localhost:/info2180-finalProject/BugMe.php", true);
+                xmlhttp2.open("POST", "BugMe.php", true);
                 xmlhttp2.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp2.onreadystatechange = function() {
                     if (this.readyState === 4 || this.status === 200) {
                         // alert(this.responseText);
                         response = this.response;
+                        console.log(this.response);
                         //document.getElementById("loadphp").innerHTML = this.responseText;
                         //window.location.href = "Dashboard.html", true;
                         if (response.localeCompare('True') == 0) {
@@ -109,7 +108,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     "&description=" + description.value + "&title=" + title.value + "&num=" + '3';
                 console.log(data)
                 var xmlhttp3 = new XMLHttpRequest();
-                xmlhttp3.open("POST", "http://localhost:/info2180-finalProject/BugMe.php", true);
+                xmlhttp3.open("POST", "BugMe.php", true);
                 xmlhttp3.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
                 xmlhttp3.onreadystatechange = function() {
                     if (this.readyState === 4 || this.status === 200) {
@@ -138,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if ($(event.target).attr('id') == 'closed') {
             data = 'num=' + '4';
             var xmlhttp4 = new XMLHttpRequest();
-            xmlhttp4.open("POST", "http://localhost:/info2180-finalProject/BugMe.php", true);
+            xmlhttp4.open("POST", "BugMe.php", true);
             xmlhttp4.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp4.onreadystatechange = function() {
                 if (this.readyState === 4 || this.status === 200) {
@@ -150,7 +149,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if ($(event.target).attr('id') == 'progress') {
             data = 'num=' + '5';
             var xmlhttp5 = new XMLHttpRequest();
-            xmlhttp5.open("POST", "http://localhost:/info2180-finalProject/BugMe.php", true);
+            xmlhttp5.open("POST", "BugMe.php", true);
             xmlhttp5.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
             xmlhttp5.onreadystatechange = function() {
                 if (this.readyState === 4 || this.status === 200) {

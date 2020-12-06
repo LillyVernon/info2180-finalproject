@@ -5,19 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BugMe Issue Tracker</title>
+
+
+
     <link rel="stylesheet" href="dashboardStyle.css">
     <script src="BugMe.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(document).ready(function() {
-            $(".phptable").load('http://localhost/info2180-finalProject/dashboard.php');
+            $(".phptable").load('dashboard.php');
         });
+
+        function viewdetail(id) {
+            $.ajax({
+                url: "issueDetail.php",
+                method: "post",
+                async: false,
+                data: {
+                    "getdetails": 1,
+                    "id": id
+                },
+                success: function(data) {
+                    $(".item3").html(data);
+                }
+
+            });
+        }
     </script>
 </head>
 
 <body>
 
-    <div class="grid-container">
+    <div class="grid-container" style="background-color: red;">
         <div class="item1">
             <header>
                 <h5> BugMe Issue Tracker </h5>
